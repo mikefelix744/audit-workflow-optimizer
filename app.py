@@ -64,9 +64,30 @@ if submit:
     suggested = staff_df.head(4)
     st.table(suggested[["staff_id","name","level","skills"]])
 
-    st.subheader("Scenario Simulation")
-    add_delay = st.number_input("If engagement extends by (weeks)", min_value=0, max_value=8, value=0)
-    if add_delay>0:
-        new_weeks = recommended_weeks + int(add_delay)
-        st.write(f"New estimated duration: **{new_weeks} week(s)**")
-        st.write("AI Suggestion: re-check staff availability; consider moving a Senior from a low-risk engagement or hire temporary Associate.")
+    st.subheader("Delays Scenario Simulation")
+
+    delay_weeks = st.number_input(
+        "Enter additional weeks of delay (e.g., 1 or 2)",
+        min_value=0,
+        max_value=10,
+        value=0,
+        step=1
+    )
+
+    if delay_weeks > 0;
+       adjusted_timeline = estimated_timeline + delay_weeks
+       adjusted_hours = estimated_hours + (delay_weeks * 40) #Assuming 40hrs per week
+
+       st.write(f"📌 **Adjusted Timeline:** {adjusted_timeline} weeks")
+       st.write(f"📌 **Adjusted Estimated Hours:** {adjusted_hours} hours")
+
+       st.info(
+        f"A delay of {delay_weeks} weeks adds approximately "
+        f"{adjusted_hours - estimated_hours} extra hours to the engagement."
+        )
+else:
+        st.write("No delay applied. Timeline remains unchanged.")
+    
+
+
+    
