@@ -65,7 +65,7 @@ if submit:
     st.table(suggested[["staff_id","name","level","skills"]])
 
 # Example structure for your scenario
-def main():
+
     st.subheader("Delays Scenario Simulation")
     if 'estimated_hours' in locals() and 'estimated_timeline' in locals():
         delay_weeks = st.number_input(
