@@ -46,7 +46,7 @@ if submit:
     recommended_weeks = max(1, int(np.round(est_hours / 120)))  # baseline 4 people * 30 hrs = 120 hrs/week
     st.write(f"Estimated duration: **{recommended_weeks} week(s)** (baseline staffing: 4 people at 30 hrs/week)")
 
-    st.subheader("Staff Matching (heuristic)")
+    st.subheader("Staff Matching (Score Based)")
     # simplistic scoring: skill match + level weight + availability
     req_skills = ["Audit"]  # assume all engagements require Audit
     staff_df = staff.copy()
