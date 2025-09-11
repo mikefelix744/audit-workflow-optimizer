@@ -1,0 +1,22 @@
+
+Audit Workflow Optimizer (AWO) — Concept Note
+
+Problem:
+Resource planning in audit firms is largely manual, handled by administrative staff who match auditors to engagements using spreadsheets and institutional memory. This leads to inefficiencies: mismatched skills, overruns, staff burnout, and missed revenue opportunities.
+
+Solution:
+AWO is an AI-assisted resource planner that learns from historical engagements to predict required hours and timelines, matches staff to tasks based on skills and availability, and simulates scenarios (delays, scope changes). It acts as an admin copilot—reducing manual scheduling time while improving staffing quality and forecast accuracy.
+
+Key Features:
+- Engagement Prediction Engine: predicts estimated hours and overrun likelihood using historical data.
+- Smart Staff Matcher: ranks available staff by skill-fit, level, and availability.
+- Dynamic Resourcing Dashboard: visualizes resource load and recommends reallocation.
+- Scenario Simulation: what-if analysis for delays, scope changes, and new engagements.
+
+Impact:
+- Reduces administrative planning time and lowers overruns.
+- Improves audit quality by aligning staff skills with engagement needs.
+- Enables proactive resource adjustments and better client timelines.
+
+Hack-a-thon Prototype:
+A lightweight Streamlit prototype demonstrates core flows: estimate hours, suggest a baseline timeline, match staff (heuristic), and simulate delays. The prototype and sample data are saved alongside instructions for local execution.
