@@ -67,13 +67,13 @@ if submit:
     st.subheader("Delays Scenario Simulation")
 
     if 'estimated-hours' in locals() and 'estimated_timeline' in locals():
-    delay_weeks = st.number_input(
-        "Enter additional weeks of delay (e.g., 1 or 2)",
-        min_value=0,
-        max_value=10,
-        value=0,
-        step=1,
-        key="delay_input"
+       delay_weeks = st.number_input(
+          "Enter additional weeks of delay (e.g., 1 or 2)",
+          min_value=0,
+          max_value=10,
+          value=0,
+          step=1,
+          key="delay_input"
     )
 
     if delay_weeks > 0:
