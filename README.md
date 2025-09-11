@@ -8,16 +8,11 @@ What this prototype includes (saved in this folder):
 - app.py : simple Streamlit demo that:
     * estimates engagement hours using a simple linear regression (from historicals)
     * suggests a baseline timeline
-    * matches staff using a heuristic score
+    * matches staff using a score
     * allows a simple scenario simulation for delays
 
 How to run the demo locally:
-1. Ensure you have Python 3.8+ and pip.
-2. Install dependencies:
-    pip install streamlit pandas numpy
-3. Run the app:
-    streamlit run app.py
-4. The app will open in your browser. Use the sidebar to create a new engagement and click "Estimate & Match Staff".
+1. Click on this streamlit link: https://audit-workflow-optimizer.streamlit.app/
 
 
 
