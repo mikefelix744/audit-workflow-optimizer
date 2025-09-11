@@ -74,7 +74,7 @@ if submit:
         step=1
     )
 
-    if delay_weeks > 0;
+    if delay_weeks > 0:
        adjusted_timeline = estimated_timeline + delay_weeks
        adjusted_hours = estimated_hours + (delay_weeks * 40) #Assuming 40hrs per week
 
