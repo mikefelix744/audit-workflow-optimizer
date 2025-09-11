@@ -19,9 +19,6 @@ How to run the demo locally:
     streamlit run app.py
 4. The app will open in your browser. Use the sidebar to create a new engagement and click "Estimate & Match Staff".
 
-Notes:
-- This is a lightweight prototype built for the Hack-a-thon to showcase core concepts.
-- In production, replace the heuristic model with a trained ML model (scikit-learn or similar),
-  add authentication, integrate with the firm's HR/time systems, and implement constraints (budgets, skills, client preferences).
 
-Files saved to: /mnt/data/audit_workflow_optimizer_demo
+
+
