@@ -64,8 +64,6 @@ if submit:
     suggested = staff_df.head(4)
     st.table(suggested[["staff_id","name","level","skills"]])
 
-# Example structure for your scenario
-
     st.subheader("Delays Scenario Simulation")
     if 'estimated_hours' in locals() and 'estimated_timeline' in locals():
         delay_weeks = st.number_input(
