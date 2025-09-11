@@ -64,27 +64,29 @@ if submit:
     suggested = staff_df.head(4)
     st.table(suggested[["staff_id","name","level","skills"]])
 
-   st.subheader("Delays Scenario Simulation")
+# Example structure for your scenario
+def main():
+    st.subheader("Delays Scenario Simulation")
+    if 'estimated_hours' in locals() and 'estimated_timeline' in locals():
+        delay_weeks = st.number_input(
+            "Enter additional weeks of delay (e.g., 1 or 2)",
+            min_value=0,
+            max_value=10,
+            value=0,
+            step=1,
+            key="delay_input"
+        )
+        if delay_weeks > 0:
+            adjusted_timeline = estimated_timeline + delay_weeks
+            adjusted_hours = int(estimated_hours + (delay_weeks * 40))  # Assuming 40hrs per week
+            st.write(f"📌 **Adjusted Timeline:** {adjusted_timeline} weeks")
+            st.write(f"📌 **Adjusted Estimated Hours:** {adjusted_hours} hours")
+            st.success(
+                f"Delay of {delay_weeks} weeks increases work by "
+                f"{adjusted_hours - estimated_hours} extra hours to the engagement."
+            )
+        else:
+            st.info("No delay applied. Timeline remains unchanged.")
+    else:
+        st.warning("Please run an estimate first before testing a scenario simulation.")
 
-   if 'estimated_hours' in locals() and 'estimated_timeline' in locals():
-       delay_weeks = st.number_input(
-           "Enter additional weeks of delay (e.g., 1 or 2)",
-           min_value=0,
-           max_value=10,
-           value=0,
-           step=1,
-           key="delay_input"
-       )
-       if delay_weeks > 0:
-           adjusted_timeline = estimated_timeline + delay_weeks
-           adjusted_hours = int(estimated_hours + (delay_weeks * 40))  # Assuming 40hrs per week
-           st.write(f"📌 **Adjusted Timeline:** {adjusted_timeline} weeks")
-           st.write(f"📌 **Adjusted Estimated Hours:** {adjusted_hours} hours")
-           st.success(
-               f"Delay of {delay_weeks} weeks increases work by "
-               f"{adjusted_hours - estimated_hours} extra hours to the engagement."
-           )
-       else:
-           st.info("No delay applied. Timeline remains unchanged.")
-   else:
-       st.warning("Please run an estimate first before testing a scenario simulation.")
