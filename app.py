@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from pathlib import Path
 from sklearn.linear_model import LinearRegression
 
 
